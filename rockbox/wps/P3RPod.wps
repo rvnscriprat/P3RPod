@@ -1,0 +1,131 @@
+#   ######:    ######   ######:   ######:                   ## ⠀⠀⠀⢸⣦⡀⠀⠀⠀⠀⢀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#   #######   ##:  ##:  #######   #######:                  ## ⠀⠀⠀⢸⣏⠻⣶⣤⡶⢾⡿⠁⠀⢠⣄⡀⢀⣴⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#   ##   :##  ##    ##  ##   :##  ##   :##                  ## ⠀⠀⣀⣼⠷⠀⠀⠁⢀⣿⠃⠀⠀⢀⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#   ##    ##       :##  ##    ##  ##    ##   .####.    :###.## ⠴⣾⣯⣅⣀⠀⠀⠀⠈⢻⣦⡀⠒⠻⠿⣿⡿⠿⠓⠂⠀⠀⢀⡇⠀⠀⠀⠀⠀⠀
+#   ##   :##      :##   ##   :##  ##   :##  .######.  :####### ⠀⠀⠀⠉⢻⡇⣤⣾⣿⣷⣿⣿⣤⠀⠀⣿⠁⠀⠀⠀⢀⣴⣿⣿⠀⠀⠀⠀⠀⠀⠀
+#   #######:    ####:   #######:  #######:  ###  ###  ###  ### ⠀⠀⠀⠀⠸⣿⡿⠏⠀⢀⠀⠀⠿⣶⣤⣤⣤⣄⣀⣴⣿⡿⢻⣿⡆⠀⠀⠀⠀⠀⠀
+#   ######      ####:   ######    ######:   ##.  .##  ##.  .## ⠀⠀ ⠀⠀⠟⠁⠀⢀⣼⠀⠀⠀⠹⣿⣟⠿⠿⠿⡿⠋⠀⠘⣿⣇⠀⠀⠀⠀⠀
+#   ##            :##   ##   ##.  ##        ##    ##  ##    ## ⠀⠀⠀⠀⠀⢳⣶⣶⣿⣿⣇⣀⠀⠀⠙⣿⣆⠀⠀⠀⠀⠀⠀⠛⠿⣿⣦⣤⣀⠀
+#   ##        ##   :##  ##   ##   ##        ##.  .##  ##.  .## ⠀⠀⠀⠀⠀⠀⣹⣿⣿⣿⣿⠿⠋⠁⠀⣹⣿⠳⠀⠀⠀⠀⠀⠀⢀⣠⣽⣿⡿⠟⠃
+#   ##        ##:  ##:  ##   :##  ##        ###  ###  ###  ### ⠀⠀⠀⠀⢰⠿⠛⠻⢿⡇⠀⠀⠀⣰⣿⠏⠀⠀⢀⠀⠀⠀⣾⣿⠟⠋⠁⠀⠀⠀
+#   ##        #######   ##    ##: ##        .######.  :####### ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠀⠀⣰⣿⣿⣾⣿⠿⢿⣷⣀⢀⣿⡇⠁⠀⠀⠀⠀⠀
+#   ##         #####    ##    ### ##         .####.    :###.## ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠉⠁⠀⠀⠀⠀⠙⢿⣿⣿⠇⠀⠀⠀
+#                                                               ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⠀⠀⠀⠀⠀⠀
+#   P3RPod
+                                      ⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀
+
+#__WPS File
+
+#__Hide the status bar
+%wd
+
+#__Backdrop
+%xl(backdrop,p3rmenu.bmp,0,0)
+%xl(lockscreen,p3rpodLock.bmp,0,0)
+%V(0,0,-,-,-)%VB
+%?mh<%xd(lockscreen)|%xd(backdrop)>
+%V(0,0,-,-,-)
+
+#__Preload fonts
+%Fl(3,15-RodinProEB.fnt)
+%Fl(4,24-RodinProEB.fnt)
+%Fl(5,15-NewRodinProDB.fnt)
+%Fl(6,30-RodinProEB.fnt)
+
+#__Preload images
+%xl(H,BatteryStatus.bmp,12)
+%xl(PBB,pb_back.bmp,0,0)
+%xl(PB,pb.bmp,0,0)
+%xl(VBB,vb_back.bmp,0,0)
+%xl(VB,vb.bmp,0,0)
+%xl(PBI,Playback_Icons.bmp,5)
+
+%xl(darkhour,DarkHour.bmp,0,0)
+%xl(lateatnight,LateAtNight.bmp,0,0)
+%xl(earlymorning,EarlyMorning.bmp,0,0)
+%xl(morning,Morning.bmp,0,0)
+%xl(daytime,Daytime.bmp,0,0)
+%xl(afternoon,Afternoon.bmp,0,0)
+%xl(nighttime,Nighttime.bmp,0,0)
+
+%?mh<%Vd(LockScreen)|%Vd(MainDisplay)>
+
+#----------- Main Display ---------#
+
+#__Clear Screen - first member; repaints the backdrop on every refresh so nothing blanks on Hold
+%Vl(MainDisplay,0,0,320,240,-)
+
+#__Volume Text
+%Vl(MainDisplay,221,34,80,31,5)%Vf(000000)
+%ar%?mh<LOCKED|Vol. %pv dB>
+
+#__Battery Text
+%Vl(MainDisplay,230,16,45,15,5)%Vf(000000)
+%ar%bl%%
+
+#__Battery Icon
+%Vl(MainDisplay,280,17,21,11,-)%Vf(000000)
+%?bp<%xd(Hl)|%?bl<%xd(Ha)|%xd(Hb)|%xd(Hc)|%xd(Hd)|%xd(He)|%xd(Hf)|%xd(Hg)|%xd(Hh)|%xd(Hi)|%xd(Hj)|%xd(Hk)>>
+
+#__Time of Day
+%Vl(MainDisplay,0,14,201,25,-)
+%?if(%ck,=,0)<%xd(darkhour)|>
+%?and(%if(%ck, >=, 1),%if(%ck, <, 4))<%xd(lateatnight)>
+%?and(%if(%ck, >=, 4),%if(%ck, <, 7))<%xd(earlymorning)>
+%?and(%if(%ck, >=, 7),%if(%ck, <, 11))<%xd(morning)>
+%?and(%if(%ck, >=, 11),%if(%ck, <, 15))<%xd(daytime)>
+%?and(%if(%ck, >=, 15),%if(%ck, <, 19))<%xd(afternoon)>
+%?and(%if(%ck, >=, 19),%if(%ck, <, 23))<%xd(nighttime)>
+%?if(%ck,=,23)<%xd(lateatnight)|>
+
+%Vl(MainDisplay,0,45,45,15,5)%Vf(000000)
+%al%cH:%cM
+
+#__Track Progress Bar
+%Vl(MainDisplay,20,194,280,1,-)
+%dr(0,0,280,1)
+%Vl(MainDisplay,20,195,280,5,-)
+%pb(0,0,280,5,PBB,slider,PB)
+%Vl(MainDisplay,20,200,280,1,-)
+%dr(0,0,280,1)
+
+#__Album Art
+%Vl(MainDisplay,21,69,114,114,-)
+%Cl(1,1,112,112,c,c)
+%dr(0,0,114,1)%dr(0,113,114,1)%dr(0,1,1,112)%dr(113,1,1,112)
+%Cd
+
+#__Track Title
+%Vl(MainDisplay,142,85,158,42,4)%Vf(ff2c39)
+%al%s%?it<%it|%fn>
+
+#__Artist
+%Vl(MainDisplay,142,110,158,17,3)
+%al%s%?ia<%ia|NO TAG>
+
+#__Album
+%Vl(MainDisplay,142,130,158,17,3)
+%al%s%?id<%id|NO ALBUM>
+
+#__File Info
+%Vl(MainDisplay,142,150,165,17,3)
+%al%s%fc | %fk kHz
+
+#__Track Time / Playlist position / Clock
+%Vl(MainDisplay,20,213,280,20,3)
+%al     %pc%ac%pp/%pe%ar-%pr
+
+#__Play/Pause Icon
+%Vl(MainDisplay,20,214,21,11,-)
+%?mp<%xd(PBI,1)|%xd(PBI,3)|%xd(PBI,2)|%xd(PBI,4)|%xd(PBI,5)>
+
+#----------- Lock Screen ----------#
+
+#__Clock
+%Vl(LockScreen,115,135,200,30,6)
+%ac%cH:%cM:%cS
+# %alLOCKED
+
+#__Calendar
+%Vl(LockScreen,115,166,200,20,3)
+%ac%ca.%, %cb. %ce

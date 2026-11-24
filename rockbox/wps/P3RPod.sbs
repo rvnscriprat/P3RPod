@@ -1,0 +1,216 @@
+#   ######:    ######   ######:   ######:                   ## ⠀⠀⠀⢸⣦⡀⠀⠀⠀⠀⢀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#   #######   ##:  ##:  #######   #######:                  ## ⠀⠀⠀⢸⣏⠻⣶⣤⡶⢾⡿⠁⠀⢠⣄⡀⢀⣴⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#   ##   :##  ##    ##  ##   :##  ##   :##                  ## ⠀⠀⣀⣼⠷⠀⠀⠁⢀⣿⠃⠀⠀⢀⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+#   ##    ##       :##  ##    ##  ##    ##   .####.    :###.## ⠴⣾⣯⣅⣀⠀⠀⠀⠈⢻⣦⡀⠒⠻⠿⣿⡿⠿⠓⠂⠀⠀⢀⡇⠀⠀⠀⠀⠀⠀
+#   ##   :##      :##   ##   :##  ##   :##  .######.  :####### ⠀⠀⠀⠉⢻⡇⣤⣾⣿⣷⣿⣿⣤⠀⠀⣿⠁⠀⠀⠀⢀⣴⣿⣿⠀⠀⠀⠀⠀⠀⠀
+#   #######:    ####:   #######:  #######:  ###  ###  ###  ### ⠀⠀⠀⠀⠸⣿⡿⠏⠀⢀⠀⠀⠿⣶⣤⣤⣤⣄⣀⣴⣿⡿⢻⣿⡆⠀⠀⠀⠀⠀⠀
+#   ######      ####:   ######    ######:   ##.  .##  ##.  .## ⠀⠀ ⠀⠀⠟⠁⠀⢀⣼⠀⠀⠀⠹⣿⣟⠿⠿⠿⡿⠋⠀⠘⣿⣇⠀⠀⠀⠀⠀
+#   ##            :##   ##   ##.  ##        ##    ##  ##    ## ⠀⠀⠀⠀⠀⢳⣶⣶⣿⣿⣇⣀⠀⠀⠙⣿⣆⠀⠀⠀⠀⠀⠀⠛⠿⣿⣦⣤⣀⠀
+#   ##        ##   :##  ##   ##   ##        ##.  .##  ##.  .## ⠀⠀⠀⠀⠀⠀⣹⣿⣿⣿⣿⠿⠋⠁⠀⣹⣿⠳⠀⠀⠀⠀⠀⠀⢀⣠⣽⣿⡿⠟⠃
+#   ##        ##:  ##:  ##   :##  ##        ###  ###  ###  ### ⠀⠀⠀⠀⢰⠿⠛⠻⢿⡇⠀⠀⠀⣰⣿⠏⠀⠀⢀⠀⠀⠀⣾⣿⠟⠋⠁⠀⠀⠀
+#   ##        #######   ##    ##: ##        .######.  :####### ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠀⠀⣰⣿⣿⣾⣿⠿⢿⣷⣀⢀⣿⡇⠁⠀⠀⠀⠀⠀
+#   ##         #####    ##    ### ##         .####.    :###.## ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠉⠁⠀⠀⠀⠀⠙⢿⣿⣿⠇⠀⠀⠀
+#                                                               ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⠀⠀⠀⠀⠀⠀⠀
+#                                               ⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀
+
+#__SBS File
+
+#__Hide the status bar
+%wd
+
+#__Disable Title
+%?Lt<|>
+
+#__Backdrop (1-bit bmp on the backdrop layer, recoloured by the theme)
+%xl(P3RPod,backdrop.bmp,0,0)
+%xl(lockscreen,p3rpodLock.bmp,0,0)
+%V(0,0,-,-,-)%VB
+%?mh<%xd(lockscreen)|%xd(P3RPod)>
+%V(0,0,-,-,-)
+
+#__Preload fonts
+%Fl(3,15-RodinProEB.fnt)
+%Fl(4,20-RodinProEB.fnt)
+%Fl(5,15-NewRodinProDB.fnt)
+%Fl(6,30-RodinProEB.fnt)
+%Fl(7,1-smallRodinPro.fnt)
+
+#__Preload images
+%xl(PBI,Playback_Icons.bmp,5)
+%xl(H,BatteryStatus.bmp,12)
+%xl(PBB,pb_back.bmp,0,0)
+%xl(PB,pb.bmp,0,0)
+%xl(VBB,vb_back.bmp,0,0)
+%xl(VB,vb.bmp,0,0)
+
+%xl(darkhour,DarkHour.bmp,0,0)
+%xl(lateatnight,LateAtNight.bmp,0,0)
+%xl(earlymorning,EarlyMorning.bmp,0,0)
+%xl(morning,Morning.bmp,0,0)
+%xl(daytime,Daytime.bmp,0,0)
+%xl(afternoon,Afternoon.bmp,0,0)
+%xl(nighttime,Nighttime.bmp,0,0)
+
+#__Quickscreen Images
+%xl(Slider,Slider.bmp,0,0)
+%xl(SliderBack,QuickSliderBack.bmp,0,0)
+%xl(BrightnessIcons,QuickBrightness.bmp,0,0)
+%xl(VolumeIcons,VolumeIcons.bmp,4)
+
+#__Main Menu UI
+%xl(mmNowPlaying,mmNowPlaying.bmp,0,0)
+%xl(mmDBase,mmDatabase.bmp,0,0)
+%xl(mmPlaylists,mmPlaylists.bmp,0,0)
+%xl(mmSettings,mmSettings.bmp,0,0)
+%xl(mmPlugins,mmPlugins.bmp,0,0)
+%xl(mmSystem,mmSystem.bmp,0,0)
+
+#__Clear Screen
+
+%?mh<%Vd(LockScreen)|%Vd(MainDisplay)>
+
+%Vl(LockScreen,0,0,320,240,-)
+
+#------------- Status Bar Layer -----------#
+
+#__Battery Text
+%Vl(MainDisplay,230,16,45,20,5)%Vf(000000)
+%ar%bl%%
+
+#__Battery Icon
+%Vl(MainDisplay,280,17,21,11,-)%Vf(000000)
+%?bp<%xd(Hl)|%?bl<%xd(Ha)|%xd(Hb)|%xd(Hc)|%xd(Hd)|%xd(He)|%xd(Hf)|%xd(Hg)|%xd(Hh)|%xd(Hi)|%xd(Hj)|%xd(Hk)>>
+
+#__Volume Text
+%Vl(MainDisplay,221,34,80,12,5)%Vf(000000)
+%arVol. %pv dB
+
+#__Time of Day
+%Vl(MainDisplay,0,14,201,25,-)
+%?if(%ck,=,0)<%xd(darkhour)|>
+%?and(%if(%ck, >=, 1),%if(%ck, <, 4))<%xd(lateatnight)>
+%?and(%if(%ck, >=, 4),%if(%ck, <, 7))<%xd(earlymorning)>
+%?and(%if(%ck, >=, 7),%if(%ck, <, 11))<%xd(morning)>
+%?and(%if(%ck, >=, 11),%if(%ck, <, 15))<%xd(daytime)>
+%?and(%if(%ck, >=, 15),%if(%ck, <, 19))<%xd(afternoon)>
+%?and(%if(%ck, >=, 19),%if(%ck, <, 23))<%xd(nighttime)>
+%?if(%ck,=,23)<%xd(lateatnight)|>
+
+%Vl(MainDisplay,0,45,45,15,5)%Vf(000000)
+%al%cH:%cM
+
+#------------ Main Screen Layer -----------#
+
+#__USB Screen
+%?if(%cs, =, 21)<%VI(clearScreen)%Vd(USB)|%VI(menuViewport)%Vd(MainDisplay)>
+
+#__UI Viewport
+%Vi(menuViewport,134,59,175,135,4)
+
+%Vi(clearScreen,0,0,1,1,-)
+
+%Vi(-,114,69,206,120,4)
+
+#__Track Progress Bar
+%Vl(MainDisplay,115,194,185,1,-)
+%dr(0,0,185,1)
+%Vl(MainDisplay,115,195,185,5,-)
+%pb(0,0,185,5,PBB,slider,PB)
+%Vl(MainDisplay,115,200,185,1,-)
+%dr(0,0,185,1)
+
+#__Play/Pause Icons
+%Vl(MainDisplay,115,214,21,11,-)
+%?mh<|%?mp<%xd(PBI,1)|%xd(PBI,3)|%xd(PBI,2)|%xd(PBI,4)|%xd(PBI,5)>>
+
+#__Now Playing
+%Vl(MainDisplay,138,213,162,20,3)
+%al%s%?ia<%ia - %it|%fn>
+
+
+#__Cool and sexy home menu screen
+%?and(%if(%cs, !=, 8),%if(%cs, !=, 13),%if(%Lt, =, Rockbox))<%VI(clearScreen)%Lb(mainMenuList,1,1)>
+
+%Vl(mainMenuList,98,48,212,145,5)
+
+# %?if(%LT, =, Resume Playback)<%xd(mmNowPlaying)>
+%?if(%LN, =, 1)<%xd(mmNowPlaying)>
+# %?if(%LT, =, Database)<%xd(mmDBase)>
+%?if(%LN, =, 2)<%xd(mmDBase)>
+%?if(%LT, =, Playlists)<%xd(mmPlaylists)>
+%?if(%LT, =, Settings)<%xd(mmSettings)>
+%?if(%LT, =, Plugins)<%xd(mmPlugins)>
+%?if(%LT, =, System)<%xd(mmSystem)>
+
+
+#----------- Quick Screen Layer -----------#
+
+#__Clear Screen
+# %V(0,0,0,0,-)
+
+#__Quick Screen Default Location
+%?if(%cs, =, 10)<%Vd(Quickscreen)%VI(QuickDefault)>
+
+#__Quick Screen Sliders
+%Vl(Quickscreen,115,74,16,14,-)
+%?if(%pv, =, -90)<%xd(VolumeIcons,1)>
+%?and(%if(%pv, <=, -60),%if(%pv, >, -90))<%xd(VolumeIcons,2)>
+%?and(%if(%pv, <=, -30),%if(%pv, >, -60))<%xd(VolumeIcons,3)>
+%?if(%pv, >, -30)<%xd(VolumeIcons,4)>
+%Vl(Quickscreen,137,75,163,12,-)%pv(0,0,163,12,Slider,backdrop,SliderBack)
+%Vl(Quickscreen,115,97,26,27,-)%xd(BrightnessIcons,1)
+%Vl(Quickscreen,137,99,163,12,-)%St(0,0,163,12,Slider,backdrop,SliderBack,setting,brightness)
+
+# %Vl(Quickscreen,26,97,26,27,-)%xd(BrightnessIcons,1)
+# %Vl(Quickscreen,48,99,246,12,-)%St(0,0,246,12,Slider,backdrop,SliderBack,setting,brightness)
+
+#__Default Quickscreen
+%Vi(QuickDefault,115,117,185,70,3)
+
+#---------------  USB Layer ---------------#
+
+#__USB
+%?if(%cs, =, 21)<%Vd(USB)>
+
+#__USB Text
+%Vl(USB,115,110,185,30,4)
+%acUSB CONNECTED%Vs(invert)
+
+#__USB Eject Warning
+%Vl(USB,115,140,185,20,5)
+%ac%t(1) EJECT BEFORE ;%t(.1)%ac
+%Vl(USB,110,160,190,20,5)
+%ac%t(1)  DISCONNECTING ;%t(.1)%ac
+
+#----------  Lock Screen Layer  -----------#
+
+
+#__Cover the UI viewport with text viewports
+#__(janky as fuck but its the only solution i've found so shush)
+%Vl(LockScreen,98,48,222,145,5)
+%Vf(546ec2)
+%al  %mh
+%al  %mh
+%al  %mh
+%Vf(516fbe)
+%al  %mh
+%al  %mh
+%al  %mh
+%Vf(4a60a5)
+%al  %mh
+%al  %mh
+%Vf(485a8c)
+%al  %mh
+%al    %mh
+%Vf(dae6fe)
+%al  %mh
+%al%mh
+
+#__Clock
+%Vl(LockScreen,115,135,200,30,6)
+%ac%cH:%cM:%cS
+# %alLOCKED
+
+#__Calendar
+%Vl(LockScreen,115,166,200,20,3)
+%ac%ca.%, %cb. %ce
